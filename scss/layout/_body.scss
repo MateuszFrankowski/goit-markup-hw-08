@@ -1,0 +1,12 @@
+body {
+  font-family: 'Roboto', 'Raleway', sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: getColor('project-color-gray');
+  background-color: getColor('project-color-white');
+
+  /* width: 1600px; */
+}

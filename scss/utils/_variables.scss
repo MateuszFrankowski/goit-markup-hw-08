@@ -1,0 +1,20 @@
+$colors: (
+  'project-color-blue': #2196f3,
+  'project-color-dark': #212121,
+  'project-color-white': #fff,
+  'project-color-black': #000,
+  'header-backgroud-dark': rgba(47, 48, 58, 0.4),
+  'footer-backgroud-dark': #2f303a,
+  'team-backgroud-lumio': #f5f4fa,
+  'project-color-gray': #757575,
+  'tel-mail-footer': rgba(255, 255, 255, 0.6),
+  'button-shadow1': rgba(0, 0, 0, 0.15),
+  'button-shadow2': rgba(0, 0, 0, 0.01),
+  'button-shadow3': rgba(0, 0, 0, 0.08),
+  'button-shadow4': rgba(0, 0, 0, 0.11),
+  'border-top-logo': #ececec,
+  'portfolio-pictures-border': #eeeeee,
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

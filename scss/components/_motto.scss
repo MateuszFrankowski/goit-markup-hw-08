@@ -1,0 +1,50 @@
+.motto {
+  text-align: center;
+  background-image: linear-gradient(
+      to bottom,
+      getColor('header-backgroud-dark'),
+      getColor('header-backgroud-dark')
+    ),
+    url('../images/headerbackground.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__container {
+    padding-top: 200px;
+    padding-left: 252px;
+    padding-right: 252px;
+    padding-bottom: 200px;
+  }
+  &__text {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: getColor('project-color-white');
+    text-align: center;
+    max-width: 696px;
+  }
+}
+
+%button {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  background-color: getColor('project-color-blue');
+  box-shadow: 0px 4px 4px getColor('button-shadow1');
+  border-radius: 4px;
+  cursor: pointer;
+  border-style: none;
+  color: getColor('project-color-white');
+  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+}
+.button {
+  @extend %button;
+}

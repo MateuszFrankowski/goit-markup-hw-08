@@ -1,0 +1,84 @@
+%animation9 {
+  color: getColor('project-color-blue');
+  transition: color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team {
+  background-color: getColor('team-backgroud-lumio');
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    color: getColor('project-color-dark');
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__list-wrapper {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list-item {
+    background: getColor('project-color-white');
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    padding-bottom: 30px;
+  }
+  &__description {
+    padding-top: 30px;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+
+    color: getColor('project-color-dark');
+  }
+  &__department {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    margin-top: 10px;
+    color: getColor('project-color-gray');
+  }
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.social-link {
+  &__container {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover,
+    &:focus {
+      width: 44px;
+      height: 44px;
+      background-color: #2196f3;
+      fill: #fff;
+      @extend %animation9;
+      .social-link__icon {
+        background-color: #2196f3;
+        fill: #fff;
+        @extend %animation9;
+      }
+    }
+  }
+  &__icon {
+    fill: #afb1b8;
+    display: block;
+    width: 45%;
+    height: 45%;
+  }
+}

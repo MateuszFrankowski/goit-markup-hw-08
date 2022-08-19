@@ -1,0 +1,129 @@
+$contactWays: tel, mail;
+
+%animation3 {
+  fill: getColor('project-color-blue');
+  border-color: getColor('project-color-blue');
+  transition-property: border-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-foot {
+  background-color: getColor('footer-backgroud-dark');
+  min-height: 252px;
+
+  &__container {
+    padding-top: 60px;
+    display: flex;
+    gap: 70px;
+  }
+}
+
+.address {
+  margin-top: 20px;
+  &__street {
+    color: getColor('project-color-white');
+  }
+  // &__tel,
+  // &__mail {
+  //   line-height: 1.71;
+  //   color: getColor('tel-mail-footer');
+  // }
+  &__list {
+    list-style: none;
+    margin-top: 9px;
+    padding-left: 0%;
+    margin-bottom: 9px;
+  }
+  &__item {
+    margin-bottom: 9px;
+    margin-top: 0px;
+  }
+}
+
+@each $contactWay in $contactWays {
+  $i: index($contactWays, $contactWay);
+  .address__#{$contactWay} {
+    line-height: 1.71;
+    color: getColor('tel-mail-footer');
+  }
+}
+
+.page-footer__logo {
+  color: getColor('project-color-white');
+}
+
+.follow {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+
+  &__title {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: getColor('project-color-white');
+  }
+  .social-link--footer {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .social-link--white {
+    fill: #fff;
+  }
+}
+.sub {
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: getColor('project-color-white');
+    margin-bottom: 20px;
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__input {
+    outline: none;
+    appearance: none;
+    width: 358px;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 14px 15px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+    background: initial;
+  }
+}
+.btn-subs {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  border: none;
+  border-radius: 4px;
+  color: getColor('project-color-white');
+  cursor: pointer;
+  background: getColor('project-color-blue');
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin: 0 auto;
+  &__icon {
+    fill: getColor('project-color-white');
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+}

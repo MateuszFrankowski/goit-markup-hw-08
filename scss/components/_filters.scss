@@ -1,0 +1,41 @@
+%animation2 {
+  fill: getColor('project-color-blue');
+  border-color: getColor('project-color-blue');
+  transition-property: border-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.filters {
+  &__container {
+    padding-bottom: 50px;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    gap: 8px;
+  }
+  .filters__button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    background-color: getColor('team-backgroud-lumio');
+    color: getColor('project-color-dark');
+    border-style: none;
+    border-radius: 4px;
+    padding: 6px 22px;
+    &:hover,
+    &:focus {
+      background-color: getColor('project-color-blue');
+      color: getColor('project-color-white');
+      box-shadow: 0px 3px 1px getColor('button-shadow2'), 0px 1px 2px getColor('button-shadow3'),
+        0px 2px 2px getColor('button-shadow4');
+      cursor: pointer;
+      @extend %animation2;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.advantages {
+  &__list-wrapper {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+  }
+}
+.advantages {
+  &__list-item {
+    width: 270px;
+    font-size: 14px;
+  }
+}
+.advantages {
+  &__icon-frame {
+    background: getColor('team-backgroud-lumio');
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding: 25px 100px;
+    fill: getColor('project-color-blue');
+  }
+}
+.advantages {
+  &__icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.advantages__title {
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: getColor('project-color-dark');
+}
+.advantages__text {
+  line-height: 1.71;
+  color: getColor('project-color-gray');
+}
