@@ -5,5 +5,16 @@
   line-height: 1.19;
   text-decoration: none;
   color: getColor('project-color-blue');
-  margin-right: 93px;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+  }
+}
+@media screen and (max-width: 480px) {
+  img {
+    width: calc(100% / 1 - 2 * 15px);
+    height: auto;
+  }
 }

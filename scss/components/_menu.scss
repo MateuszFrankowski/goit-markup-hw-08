@@ -1,0 +1,118 @@
+.menu {
+  &__nav {
+    list-style-type: none;
+  }
+  &__link {
+    position: relative;
+    display: none;
+  }
+}
+.menu-mobile {
+  height: 40px;
+  width: 40px;
+  z-index: 100;
+  fill: black;
+  &__icon {
+    fill: black;
+    width: 44px;
+    height: 44px;
+    z-index: 100;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-mobile {
+    display: none;
+  }
+  .menu {
+    &__nav {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+    }
+    &__link {
+      position: relative;
+      display: block;
+      font-weight: 500;
+      line-height: 1.17;
+      font-style: normal;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      list-style-type: none;
+      color: getColor('project-color-dark');
+      &:hover,
+      &:focus {
+        @include hooveranimation;
+      }
+    }
+    &__item {
+      &:nth-child(2) {
+        margin-right: 60px;
+      }
+      &:nth-child(3) {
+        margin-right: 60px;
+      }
+    }
+
+    &__actual-page {
+      &::after {
+        content: '';
+        position: absolute;
+        border-radius: 2px;
+        height: 4px;
+        bottom: -32px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: getColor('project-color-blue');
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu {
+    &__nav {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+    }
+    &__link {
+      position: relative;
+      display: block;
+      font-weight: 500;
+      line-height: 1.17;
+      font-style: normal;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      list-style-type: none;
+      color: getColor('project-color-dark');
+      &:hover,
+      &:focus {
+        @include hooveranimation;
+      }
+    }
+    &__item {
+      &:nth-child(2) {
+        margin-right: 46px;
+      }
+      &:nth-child(3) {
+        margin-right: 46px;
+      }
+    }
+
+    &__actual-page {
+      &::after {
+        content: '';
+        position: absolute;
+        border-radius: 2px;
+        height: 4px;
+        bottom: -32px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: getColor('project-color-blue');
+      }
+    }
+  }
+}

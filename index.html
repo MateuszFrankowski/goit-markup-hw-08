@@ -12,12 +12,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
 
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css?=1.0.1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <p class="modal__title">Zostaw swoje dane w formularzu poniżej</p>
         <form class="form">
@@ -81,28 +81,34 @@
 
         <button type="button" class="form__close-btn" data-modal-close>X</button>
       </div>
-    </div>
+    </div> -->
     <header>
       <div class="page-heder">
         <div class="container page-heder__container">
           <nav class="menu">
-            <ul class="menu-nav">
-              <li class="menu-item">
-                <a class="logo" href="https://mateuszfrankowski.github.io/goit-markup-hw-07/"
+            <ul class="menu__nav">
+              <li class="menu__item">
+                <a class="logo" href="https://mateuszfrankowski.github.io/goit-markup-hw-08/"
                   >Web<span class="logo__span page-heder__logo">Studio</span></a
                 >
               </li>
-              <li class="menu-item">
-                <a class="menu-link menu-item__actual-page" href="index.html">Agencja</a>
+              <li class="menu__item">
+                <a class="menu__link menu__actual-page" href="index.html">Agencja</a>
               </li>
-              <li class="menu-item"><a class="menu-link" href="portfolio.html">Portfolio</a></li>
-              <li class="menu-item"><a class="menu-link" href="#contact">Kontakt</a></li>
+              <li class="menu__item"><a class="menu__link" href="portfolio.html">Portfolio</a></li>
+              <li class="menu__item"><a class="menu__link" href="#contact">Kontakt</a></li>
             </ul>
           </nav>
+          <div class="menu-mobile">
+            <svg class="menu-mobile__icon">
+              <use href="images/sprite-max.svg#mobile-menu"></use>
+            </svg>
+          </div>
+
           <ul class="contact">
             <li class="contact__item">
               <a class="contact__link" href="mailto:info@devstudio.com">
-                <svg class="contact-icon">
+                <svg class="contact__icon">
                   <use href="images/sprite.svg#icon-envelope"></use>
                 </svg>
 
@@ -111,7 +117,7 @@
             </li>
             <li class="contact__item">
               <a class="contact__link" href="tel:+48111111111">
-                <svg class="contact-icon">
+                <svg class="contact__icon">
                   <use href="images/sprite.svg#icon-smartphone"></use>
                 </svg>
 
@@ -130,7 +136,7 @@
     </header>
     <main>
       <section class="advantages">
-        <div class="container">
+        <div class="container advantages__container">
           <ul class="advantages__list-wrapper">
             <li class="advantages__list-item">
               <div class="advantages__icon-frame">
@@ -223,13 +229,36 @@
 
           <ul class="team__list-wrapper">
             <li class="team__list-item">
-              <figure class="team-designer">
-                <img
-                  src="images/teamproductdesigner.jpg"
-                  alt="Product Designer John Doe"
-                  width="270"
-                  height="260"
-                />
+              <figure class="team__designer">
+                <picture>
+                  <source
+                    srcset="
+                      images/team/teamproductdesigner-desktop.jpg    1x,
+                      images/team/teamproductdesigner-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      images/team/teamproductdesigner-tablet.jpg    1x,
+                      images/team/teamproductdesigner-tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      images/team/teamproductdesigner-mobile.jpg    1x,
+                      images/team/teamproductdesigner-mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+
+                  <img
+                    class="team__img"
+                    src="images/team/teamproductdesigner-mobile.jpg"
+                    alt="Product Designer John Doe"
+                  />
+                </picture>
                 <figcaption class="team__description">
                   <p class="team__name">John Doe</p>
                   <p class="team__department">Product Designer</p>
@@ -268,13 +297,36 @@
             </li>
 
             <li class="team__list-item">
-              <figure>
-                <img
-                  src="images/teamfrontednfdeveloper.jpg"
-                  alt="Frontend Developer John Doe "
-                  width="270"
-                  height="260"
-                />
+              <figure class="team__frontend">
+                <picture>
+                  <source
+                    srcset="
+                      images/team/frontend-developer-desktop.jpg    1x,
+                      images/team/frontend-developer-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      images/team/frontend-developer-tablet.jpg    1x,
+                      images/team/frontend-developer-tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      images/team/frontend-developer-mobile.jpg    1x,
+                      images/team/frontend-developer-mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+
+                  <img
+                    class="team__img"
+                    src="images/team/frontend-developer-mobile.jpg"
+                    alt="Frontend John Doe"
+                  />
+                </picture>
                 <figcaption class="team__description">
                   <p class="team__name">John Doe</p>
                   <p class="team__department">Frontend Developer</p>
@@ -313,13 +365,37 @@
             </li>
 
             <li class="team__list-item">
-              <figure class="team-marketing">
-                <img
-                  src="images/teammarketing.jpg"
-                  alt="Marketing John Doe "
-                  width="270"
-                  height="260"
-                />
+              <figure class="team__marketing">
+                <picture>
+                  <source
+                    srcset="
+                      images/team/teammarketing-desktop.jpg    1x,
+                      images/team/teammarketing-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      images/team/teammarketing-tablet.jpg    1x,
+                      images/team/teammarketing-tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+
+                  <source
+                    srcset="
+                      images/team/teammarketing-mobile.jpg    1x,
+                      images/team/teammarketing-mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+
+                  <img
+                    class="team__img"
+                    src="images/team/teammarketing-mobile.jpg"
+                    alt="Marketing John Doe"
+                  />
+                </picture>
                 <figcaption class="team__description">
                   <p class="team__name">John Doe</p>
                   <p class="team__department">Marketing</p>
@@ -358,13 +434,37 @@
             </li>
 
             <li class="team__list-item">
-              <figure class="team-uidesigner">
-                <img
-                  src="images/teamuidesigner.jpg"
-                  alt="UI Designer John Doe "
-                  width="270"
-                  height="260"
-                />
+              <figure class="team__uidesigner">
+                <picture>
+                  <source
+                    srcset="
+                      images/team/teamuidesigner-desktop.jpg    1x,
+                      images/team/teamuidesigner-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      images/team/teamuidesigner-tablet.jpg    1x,
+                      images/team/teamuidesigner-tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      images/team/teamuidesigner-mobile.jpg    1x,
+                      images/team/teamuidesigner-mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+
+                  <img
+                    class="team__img"
+                    src="images/team/teamuidesigner-mobile.jpg"
+                    alt="UI Designer John Doe"
+                  />
+                </picture>
+
                 <figcaption class="team__description">
                   <p class="team__name">John Doe</p>
                   <p class="team__department">UI Designer</p>
@@ -409,7 +509,7 @@
           <h2 class="customers__title">Nasi klienci</h2>
 
           <ul class="customers__list">
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <div class="customers__set">
                   <svg class="customers__icon">
@@ -418,7 +518,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <div class="customers__set">
                   <svg class="customers__icon">
@@ -427,7 +527,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <div class="customers__set">
                   <svg class="customers__icon">
@@ -436,7 +536,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <div class="customers__set">
                   <svg class="customers__icon">
@@ -445,7 +545,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <div class="customers__set">
                   <svg class="customers__icon">
@@ -454,7 +554,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <div class="customers__set">
                   <svg class="customers__icon">
@@ -478,11 +578,10 @@
           <address class="address">
             <p class="address__street">m. Warszawa, Aleje Jerozolimskie 21</p>
             <ul class="address__list">
-              <!-- Link do adresu e-mail  -->
               <li class="address__item">
                 <a class="address__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
               </li>
-              <!-- Link do numeru telefonu -->
+
               <li class="address__item">
                 <a class="address__tel" href="tel:+48111111111">+48 111 111 111</a>
               </li>

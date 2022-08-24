@@ -7,12 +7,13 @@
 }
 .filters {
   &__container {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
   &__list {
     list-style: none;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: left;
 
     gap: 8px;
   }
@@ -27,7 +28,8 @@
     color: getColor('project-color-dark');
     border-style: none;
     border-radius: 4px;
-    padding: 6px 22px;
+    height: 38px;
+    width: 103px;
     &:hover,
     &:focus {
       background-color: getColor('project-color-blue');
@@ -37,5 +39,39 @@
       cursor: pointer;
       @extend %animation2;
     }
+  }
+}
+@media screen and (min-width: 768px) {
+  .filters {
+    &__container {
+      padding-bottom: 30px;
+    }
+    &__list {
+      list-style: none;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filters {
+    &__container {
+      padding-top: 94px;
+      padding-bottom: 50px;
+    }
+    &__list {
+      list-style: none;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+  }
+
+  .filters__button {
+    justify-content: center;
+    height: 38px;
+    width: 121px;
   }
 }

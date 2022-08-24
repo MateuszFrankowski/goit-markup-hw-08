@@ -7,14 +7,17 @@ $contactWays: tel, mail;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .page-foot {
   background-color: getColor('footer-backgroud-dark');
   min-height: 252px;
+  text-align: center;
 
   &__container {
     padding-top: 60px;
-    display: flex;
-    gap: 70px;
+  }
+  &__contact {
+    margin-bottom: 60px;
   }
 }
 
@@ -23,20 +26,14 @@ $contactWays: tel, mail;
   &__street {
     color: getColor('project-color-white');
   }
-  // &__tel,
-  // &__mail {
-  //   line-height: 1.71;
-  //   color: getColor('tel-mail-footer');
-  // }
+
   &__list {
     list-style: none;
-    margin-top: 9px;
+    margin-top: 8px;
     padding-left: 0%;
-    margin-bottom: 9px;
-  }
-  &__item {
-    margin-bottom: 9px;
-    margin-top: 0px;
+    &:nth-child(1) {
+      margin-bottom: 8px;
+    }
   }
 }
 
@@ -53,11 +50,9 @@ $contactWays: tel, mail;
 }
 
 .follow {
-  display: flex;
-  flex-direction: column;
-  padding-top: 12px;
-
+  margin-bottom: 60px;
   &__title {
+    margin-bottom: 20px;
     text-transform: capitalize;
     font-weight: 700;
     font-size: 14px;
@@ -81,16 +76,13 @@ $contactWays: tel, mail;
     color: getColor('project-color-white');
     margin-bottom: 20px;
   }
-  &__form {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
 
   &__input {
     outline: none;
     appearance: none;
-    width: 358px;
+    max-width: 358px;
+
+    min-width: 100%;
     height: 100%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -103,6 +95,7 @@ $contactWays: tel, mail;
   }
 }
 .btn-subs {
+  margin-top: 20px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -119,11 +112,87 @@ $contactWays: tel, mail;
   background: getColor('project-color-blue');
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  margin: 0 auto;
+
   &__icon {
     fill: getColor('project-color-white');
     display: block;
     width: 24px;
     height: 24px;
+  }
+  &__input {
+    width: 358px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-foot {
+    background-color: getColor('footer-backgroud-dark');
+    min-height: 252px;
+
+    &__container {
+      padding-top: 60px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 60px 144px;
+    }
+  }
+  .sub {
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+// desktop
+@media screen and (min-width: 1200px) {
+  .page-foot {
+    text-align: left;
+    justify-content: space-between;
+
+    align-items: flex-start;
+    background-color: getColor('footer-backgroud-dark');
+    min-height: 252px;
+
+    &__container {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 70px;
+      align-items: flex-start;
+    }
+  }
+
+  .address {
+    &__list {
+      list-style: none;
+      margin-top: 9px;
+      padding-left: 0%;
+      margin-bottom: 9px;
+    }
+    &__item {
+      margin-bottom: 9px;
+      margin-top: 0px;
+    }
+  }
+
+  .follow {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  .sub {
+    &__form {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+    &__input {
+      width: 358px;
+    }
+  }
+  .btn-subs {
+    margin: 0 auto;
   }
 }

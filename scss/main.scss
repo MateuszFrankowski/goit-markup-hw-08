@@ -1,9 +1,13 @@
 @import 'utils/variables';
 @import 'utils/normalize';
 @import 'utils/visually-hidden';
+@import 'utils/mixin';
 @import 'base/common';
 @import 'base/container';
 @import 'layout/body';
+@import 'components/social';
+@import 'components/menu';
+@import 'components/contact';
 @import 'components/header';
 @import 'components/advantages';
 @import 'components/customers';

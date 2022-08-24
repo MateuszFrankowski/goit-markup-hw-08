@@ -1,0 +1,35 @@
+.icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  //   padding: 16px 0;
+}
+.social-link {
+  &__container {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover,
+    &:focus {
+      width: 44px;
+      height: 44px;
+      background-color: #2196f3;
+      fill: #fff;
+      @include hooveranimation;
+      .social-link__icon {
+        background-color: #2196f3;
+        fill: #fff;
+        @include hooveranimation;
+      }
+    }
+  }
+  &__icon {
+    fill: #afb1b8;
+    display: block;
+    width: 45%;
+    height: 45%;
+  }
+}
