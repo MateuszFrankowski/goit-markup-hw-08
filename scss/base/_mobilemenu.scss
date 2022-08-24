@@ -1,0 +1,134 @@
+.mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 36px;
+  margin-bottom: calc(40vh * 0.74);
+  &__link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    color: getColor('project-color-dark');
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: getColor('project-color-blue');
+    }
+  }
+}
+.mobile-menu-social {
+  position: relative;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: space-between;
+  &__link {
+    font-size: calc(100vw / 26);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.23;
+    letter-spacing: 0.02em;
+    color: getColor('project-color-blue');
+  }
+}
+.mobile-menu-contact {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  &__item:first-child {
+    margin-bottom: 32px;
+  }
+  &__tel {
+    color: getColor('project-color-blue');
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(100vw / 14);
+
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+  }
+  &__mail {
+    color: getColor('project-color-gray');
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(100vw / 20);
+
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+  }
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #ffffff;
+  z-index: 999;
+  padding: 40px 48px;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  fill: white;
+  color: #212121;
+}
+
+.menu-mobile {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  fill: white;
+  color: #212121;
+  text-decoration: none;
+  height: 40px;
+  width: 40px;
+  z-index: 0;
+  fill: black;
+  &__icon {
+    fill: black;
+    width: 44px;
+    height: 44px;
+    z-index: 0;
+  }
+}
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}

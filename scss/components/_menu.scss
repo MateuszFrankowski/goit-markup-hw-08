@@ -7,18 +7,7 @@
     display: none;
   }
 }
-.menu-mobile {
-  height: 40px;
-  width: 40px;
-  z-index: 100;
-  fill: black;
-  &__icon {
-    fill: black;
-    width: 44px;
-    height: 44px;
-    z-index: 100;
-  }
-}
+
 @media screen and (min-width: 768px) {
   .menu-mobile {
     display: none;
@@ -59,7 +48,7 @@
         position: absolute;
         border-radius: 2px;
         height: 4px;
-        bottom: -32px;
+        bottom: -40px;
         margin: 0 auto;
         left: 0;
         right: 0;
