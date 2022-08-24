@@ -42,6 +42,48 @@
     color: getColor('project-color-blue');
   }
 }
+.mobile-menu-social--line1 {
+  &:after {
+    content: '';
+    background-color: rgba(33, 33, 33, 0.2);
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    left: 27%;
+    transform: translatex(-50%);
+    display: block;
+  }
+}
+.mobile-menu-social--line2 {
+  &:after {
+    content: '';
+    background-color: rgba(33, 33, 33, 0.2);
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    left: 50%;
+    transform: translatex(-50%);
+    display: block;
+  }
+}
+.mobile-menu-social--line3 {
+  &:after {
+    content: '';
+    background-color: rgba(33, 33, 33, 0.2);
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    left: 78%;
+    transform: translatex(-50%);
+    display: block;
+  }
+}
 .mobile-menu-contact {
   padding: 0;
   margin: 0;
@@ -95,13 +137,13 @@
 .menu-container .menu-toggle {
   position: absolute;
   top: 16px;
-  right: 16px;
+  right: 95px;
   fill: white;
   color: #212121;
 }
 
 .menu-mobile {
-  position: absolute;
+  // position: absolute;
   top: 16px;
   right: 16px;
   fill: white;

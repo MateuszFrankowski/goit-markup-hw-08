@@ -129,6 +129,45 @@ body {
   color: #2196f3;
 }
 
+.mobile-menu-social--line1:after {
+  content: "";
+  background-color: rgba(33, 33, 33, 0.2);
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  left: 27%;
+  transform: translatex(-50%);
+  display: block;
+}
+
+.mobile-menu-social--line2:after {
+  content: "";
+  background-color: rgba(33, 33, 33, 0.2);
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  left: 50%;
+  transform: translatex(-50%);
+  display: block;
+}
+
+.mobile-menu-social--line3:after {
+  content: "";
+  background-color: rgba(33, 33, 33, 0.2);
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  left: 78%;
+  transform: translatex(-50%);
+  display: block;
+}
+
 .mobile-menu-contact {
   padding: 0;
   margin: 0;
@@ -180,13 +219,12 @@ body {
 .menu-container .menu-toggle {
   position: absolute;
   top: 16px;
-  right: 16px;
+  right: 95px;
   fill: white;
   color: #212121;
 }
 
 .menu-mobile {
-  position: absolute;
   top: 16px;
   right: 16px;
   fill: white;
@@ -1118,9 +1156,11 @@ body {
   row-gap: 30px;
 }
 .portfolio__img {
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
-  font-size: 0;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 .portfolio__item {
   min-width: calc(100% - 30px);
@@ -1190,23 +1230,29 @@ body {
   color: #757575;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 420px) {
+  .portfolio__item {
+    min-width: calc(100% - 30px);
+  }
   .portfolio__img {
-    max-width: 100%;
     height: auto;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .portfolio__item {
-    max-width: 100%;
+  .portfolio__list {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 30px 30px;
+  }
+  .portfolio__hovertext {
+    font-size: 18px;
+    line-height: 1.56;
+    padding: 49px 45px 49px 24px;
+    color: #fff;
   }
   .portfolio picture {
     max-width: 100%;
-  }
-  .portfolio__hovertext {
-    height: 100%;
-    padding: 10% 5%;
-    font-size: calc(0.4rem + 1vmax);
   }
 }
 @media screen and (min-width: 768px) {
