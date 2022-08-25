@@ -98,9 +98,9 @@
       gap: 30px 30px;
     }
     &__hovertext {
-      font-size: 18px;
+      font-size: calc(100vw / 26);
       line-height: 1.56;
-      padding: 49px 45px 49px 24px;
+      padding: 10vw 9vw 10vw 5vw;
       color: getColor('project-color-white');
     }
     & picture {
