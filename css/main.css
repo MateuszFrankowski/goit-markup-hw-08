@@ -207,7 +207,7 @@ body {
   padding: 32px;
   background-color: #ffffff;
   z-index: 999;
-  padding: 40px 48px;
+  padding: 48px 40px;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
@@ -219,7 +219,7 @@ body {
 .menu-container .menu-toggle {
   position: absolute;
   top: 16px;
-  right: 95px;
+  right: 16px;
   fill: white;
   color: #212121;
 }
