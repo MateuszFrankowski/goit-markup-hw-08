@@ -29,7 +29,8 @@
       justify-content: left;
       align-items: center;
     }
-    &:focus-within {
+    &:focus-within,
+    &:hover {
       .contact__icon,
       .contact__link {
         @include hooveranimation;
