@@ -431,8 +431,9 @@ body {
     justify-content: left;
     align-items: center;
   }
-  .contact:focus-within .contact__icon,
-.contact:focus-within .contact__link {
+  .contact__item:focus-within .contact__icon,
+.contact__item:focus-within .contact__link, .contact__item:hover .contact__icon,
+.contact__item:hover .contact__link {
     color: #2196f3;
     transition: color 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

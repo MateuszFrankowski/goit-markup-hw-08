@@ -29,12 +29,14 @@
       justify-content: left;
       align-items: center;
     }
-    &:focus-within,
-    &:hover {
-      .contact__icon,
-      .contact__link {
-        @include hooveranimation;
-        fill: getColor('project-color-blue');
+    &__item {
+      &:focus-within,
+      &:hover {
+        .contact__icon,
+        .contact__link {
+          @include hooveranimation;
+          fill: getColor('project-color-blue');
+        }
       }
     }
   }
